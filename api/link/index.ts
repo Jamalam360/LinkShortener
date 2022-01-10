@@ -92,6 +92,6 @@ export const handler: APIHandler = async ({ response, request }) => {
   } else if (request.method == "PUT") {
     const full = (await request.json()).link;
     const shortened = await getShortenedLink(full);
-    response.json({ link: "https://l.jamalam.tech/api/" + shortened })
+    response.json({ link: "https://l.jamalam.tech/api/l/" + shortened })
   }
 };
