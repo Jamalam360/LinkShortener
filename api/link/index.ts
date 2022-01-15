@@ -9,7 +9,7 @@ interface Link {
 
 const client = new MongoClient();
 await client.connect("mongodb://localhost:27017");
-const db = client.database("test");
+const db = client.database("link_shortener");
 const links = db.collection<Link>("links");
 
 export async function getFullLink(shortened: string): Promise<string> {
